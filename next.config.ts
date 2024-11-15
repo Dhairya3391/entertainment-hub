@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
   eslint: {
-    // This will ignore ESLint errors during builds
     ignoreDuringBuilds: true,
   },
   webpack: (config, { dev }) => {
