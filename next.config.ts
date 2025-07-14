@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
   images: {
     unoptimized: true,
   },
@@ -11,7 +10,7 @@ const nextConfig: NextConfig = {
   webpack: (config, { dev }) => {
     if (config.cache && !dev) {
       config.cache = Object.freeze({
-        type: 'memory',
+        type: "memory",
       });
     }
     return config;
